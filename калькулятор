@@ -50,6 +50,5 @@ void main()
 		break;
 	default:
 		cout << "incorrect" << endl;
-
 	}
 }
