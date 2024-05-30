@@ -1,0 +1,55 @@
+#include<iostream>
+
+using namespace std;
+
+
+void main()
+{
+	setlocale(LC_ALL, "ru");
+	float a;
+	float b;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin >> b;
+	cout << endl;
+	char key;
+	cout << "выберите действие: + - * /" << endl;
+	cin >> key;
+
+	auto Sum = [](float a, float b)
+		{
+			cout << "a + b = " << a + b << endl;
+		};
+	auto Diff = [](float a, float b)
+		{
+			cout << "a - b = " << a - b << endl;
+		};
+	auto Mult = [](float a, float b)
+		{
+			cout << "a * b = " << a * b << endl;
+		};
+	auto Div = [](float a, float b)
+		{
+			(b != 0) ? cout << "a / b = " << a / b << endl : cout << "На 0 делить нельзя" << endl;
+		};
+
+	switch (key)
+	{
+	case '+':
+		Sum(a, b);
+		break;
+	case '-':
+		Diff(a, b);
+		break;
+	case '*':
+		Mult(a, b);
+		break;
+	case '/':
+		Div(a, b);
+		break;
+	default:
+		cout << "введено некорректное действие" << endl;
+
+	}
+}
