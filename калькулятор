@@ -14,7 +14,7 @@ void main()
 	cin >> b;
 	cout << endl;
 	char key;
-	cout << "выберите действие: + - * /" << endl;
+	cout << "choose option: + - * /" << endl;
 	cin >> key;
 
 	auto Sum = [](float a, float b)
@@ -31,7 +31,7 @@ void main()
 		};
 	auto Div = [](float a, float b)
 		{
-			(b != 0) ? cout << "a / b = " << a / b << endl : cout << "На 0 делить нельзя" << endl;
+			(b != 0) ? cout << "a / b = " << a / b << endl : cout << "division by 0 is forbidden" << endl;
 		};
 
 	switch (key)
@@ -49,7 +49,7 @@ void main()
 		Div(a, b);
 		break;
 	default:
-		cout << "введено некорректное действие" << endl;
+		cout << "incorrect" << endl;
 
 	}
 }
